@@ -1,0 +1,21 @@
+.firmSection {
+    display: flex;
+    overflow: hidden;
+    text-align: center;
+    text-transform: capitalize;
+    margin-top: 20px;
+}
+.firmBox {
+    height: 250px;
+    width: 250px;
+    
+}
+.firmImage{
+    height: 200px;
+    width: 200px;
+}
+.firmImage img {
+    height: 200px;
+    width: 200px;
+}
+

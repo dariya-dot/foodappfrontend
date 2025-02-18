@@ -1,0 +1,70 @@
+.footer-section{
+    margin-top: 20px;
+    display: flex;
+     justify-content: space-around;
+    background-color: rgb(46, 45, 45);
+    padding: 20px  2px;
+    color: white;
+}
+
+.section2{
+    display: flex;
+    justify-content: space-around ;
+    width: 40%;
+    
+}
+.section1{
+    width: 50%;
+}
+.section1 h2{
+    color: tomato;
+}
+.section21 ul{
+
+padding-left:0px ;
+
+}
+.section1 .socialmediImages  img{
+    background-color: white;
+    border-radius: 60px;
+    height: 30px;
+}
+.section1 .socialmediImages{
+   display: flex;
+   gap: 10px;
+}
+.section21 ul li{
+    list-style: none;
+    cursor: pointer;
+   text-align: left;
+}
+.section22 div ,.section21 ul li,.section1 p{
+    color: rgb(221, 221, 221);
+    font-size: 0.9rem;
+    padding-top: 10px;
+}
+.hrsection{
+    background-color: black;
+}
+.hrsection hr{
+    border: none; 
+    height: 2px; 
+}
+
+@media (max-width:650px){
+    .footer-section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    .section2{
+        width: 100%;
+        justify-content: space-around;
+     
+    }
+    .section1{
+        width: 100%;
+    }
+}

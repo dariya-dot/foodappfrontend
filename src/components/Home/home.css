@@ -1,0 +1,65 @@
+*{padding: 0;border: 0;box-sizing: border-box;}
+
+.header{
+  padding: 0 70px;
+  height: 70vh;
+  background: url("../../../pexels-ella-olsson-572949-1640777.jpg") center/cover no-repeat;
+  margin: 0 70px;
+  border-radius: 20px;
+  position: relative;
+  
+}
+
+.homeSection{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1.5vw;
+  max-width: 50%;
+  bottom: 10%;
+  left: 2vw;
+  font-weight: 700;
+  border-radius: 10px; 
+  /* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+   rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+    rgba(0, 0, 0, 0.2) 0px -3px 0px inset; */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+     rgba(0, 0, 0, 0.12) 0px -12px 30px,
+      rgba(0, 0, 0, 0.12) 0px 4px 6px,
+     rgba(0, 0, 0, 0.17) 0px 12px 13px,
+      rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.homeSection h1{
+  color: rgb(0, 0, 0);
+ 
+}
+
+.homeSection button{
+  background-color: rgb(254, 254, 254);
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 20px;
+  padding: 8px 25px;
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+}
+
+.homeSection p{font-size: 1.3rem;
+ 
+    border-radius: 10px;
+color: rgb(15, 16, 7);}
+
+@media (max-width: 480px){
+  .header{height: 30vh;margin: 0 20px;}
+  .homeSection{padding-left: 0; max-width: 60%;}
+  .homeSection button{font-size: 0.7rem;width: 25vw;padding: 7px 12px;}
+  .homeSection p{display: none;}
+  .homeSection h1{font-size: 1.1rem;}
+}
+
+@media (min-width: 481px) and (max-width: 1000px){
+  .header{height: 50vh;margin: 0 20px;}
+  .homeSection{padding-left: 0;max-width: 60%;}
+  .homeSection p{font-size: medium;}
+  .homeSection h1{font-size: 1.4rem;}
+}

@@ -1,0 +1,109 @@
+.loginPopUp {
+  position: fixed;
+  z-index: 2000;
+  width: 100%;
+  height: 100%; /* Covers the full height of the content */
+  min-height: 100vh; /* Ensures it covers at least the viewport height */
+  background-color: #00000090;
+  display: grid;
+}
+.loginPopUpContainerTitle {
+  display: flex;
+  justify-content: space-between;
+}
+.loginPopUpContainer {
+  place-self: center;
+  margin-bottom: 50px;
+  width: max(28vw, 330px);
+  height: fit-content;
+  color: #808080;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 25px 30px;
+  border-radius: 10px;
+  font-size: 1rem;
+  animation: fadeIn 0.5s;
+}
+.loginPopUpContainerTitle h2 {
+  color: black;
+}
+.loginPopUpInputs {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+.loginPopUp button {
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+  background-color: tomato;
+  font-size: 1rem;
+}
+.loginPopUpInputs input {
+  border: 1px solid black;
+  font-size: 1.2rem;
+  padding: 5px;
+}
+.account span {
+  color: tomato;
+  font-weight: 700;
+  margin-left: 30px;
+}
+.account {
+  margin-top: -15px;
+}
+.loginPopUpCondition {
+  display: flex;
+  align-items: start;
+  gap: 8px;
+}
+.loginPopUpCondition input {
+  margin-top: 5px;
+}
+#noOTP{
+  display: none;
+}
+
+#yesOTP{
+  display: none;
+}
+.passwordInput {
+  position: relative;
+  display: flex;
+  align-items: center;
+ 
+}
+
+.passwordInput input {
+  width: 100%;
+  padding: 10px;
+  padding-right: 40px; /* Ensure space for the icon */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #666;
+}
+
+.toggle-password:hover {
+  color: #333;
+}
+
+@media (max-width: 375px) {
+  .loginPopUpContainer {
+   
+    width: max(25vw, 290px);
+  }
+  .account span {
+    margin: 1px;
+   
+  }
+}

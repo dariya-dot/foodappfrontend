@@ -1,0 +1,115 @@
+.Navsection {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0px;
+  font-size: 1.3rem;
+  position: sticky;
+  top: 0;
+  margin-bottom: 15px;
+  background-color: white;
+  z-index: 300;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.leftSection img {
+  width: 120px;
+  cursor: pointer;
+  border-radius: 20px;
+  border: 2px solid tomato;
+}
+
+.leftSection img:active{
+    background-color:rgb(0, 0, 0);
+}
+.rightsection img {
+  width: 30px;
+  height: 30px;
+}
+.centerSection  {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  
+}
+
+.centerSection .Link
+ {
+    text-decoration: none; 
+    color: rgb(0, 0, 0); 
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+  }
+.centerSection .Link:hover  {
+ text-decoration: underline;
+}
+.centerSection .Link:active  {
+    font-weight: 800;
+   }
+
+.rightsection {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+.rightsection button {
+    border-radius: 20px;
+    padding: 3px 0px;
+    width: 100px;
+    background-color: white;
+}
+.rightsection button:hover{
+    background-color: black;
+    color: white;
+}
+.rightsection button:active{
+    width: 90px;
+}
+
+.profiledetails{
+  position: relative;
+}
+.dropdown{
+  display: none;
+
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+}
+.profiledetails:hover .dropdown{
+  position: absolute;
+  display: flex;
+  right: 0;
+  flex-direction: column;
+  background-color: rgb(255, 254, 251);
+  border-radius: 8px;
+  list-style: none;
+  padding: 10px 20px;
+}
+.dropdown li{
+display: flex;
+align-items: center;
+cursor: pointer;
+gap: 10px;
+}
+.dropdown li:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 10px;
+  padding: 2px 20px;
+}
+.dropdown .link{
+  text-decoration: none;
+  color: black;
+}
+.Link{
+
+}
+@media (max-width:700px){
+  .Navsection .centerSection{
+    display: none;
+  }
+  .leftSection img{
+    width: 80px;
+  }
+  .rightsection button{
+    font-size: 0.7rem;
+    width: 80px;
+  }
+}

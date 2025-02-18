@@ -1,0 +1,16 @@
+
+.Appstoresection{
+    margin-top: 8vh;  
+   
+  
+}
+.storeImag{
+    padding-top: 40px;
+    gap: 100px;
+
+}
+.storeImag img{
+    width: 200px;
+    cursor: pointer;
+    margin-right: 20px;
+}

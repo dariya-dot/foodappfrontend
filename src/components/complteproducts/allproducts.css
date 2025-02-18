@@ -1,0 +1,10 @@
+.productgrid:hover p,
+.productgrid:hover h3
+
+{
+  color: rgb(245, 242, 242);
+}
+.productgrid p,
+.productgridh3{
+    margin: 5px 10px; 
+}
