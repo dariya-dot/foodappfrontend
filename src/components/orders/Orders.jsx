@@ -94,7 +94,7 @@ const Orders = () => {
                       <div key={index} >
                         <div className="productsSection">
                           <div className="prdouctImage">
-                            <img src={`${items.image}`} />
+                            <img src={`${API_URL}/uploads/${items.image}`} />
                           </div>
                           <div className="details">
                             <div>
