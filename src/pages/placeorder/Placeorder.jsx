@@ -134,9 +134,11 @@ const [orderData,setOrderData]=useState()
           const data=await response.json()
           console.log(data)
           if(data){
+
             alert('order placed')
+            navigate("/");
           }
-          navigate("/");
+        
         } catch (error) {
           console.log(error)
         }
