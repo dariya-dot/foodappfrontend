@@ -117,7 +117,7 @@ const [orderData,setOrderData]=useState()
       const data = await res.json();
       if (data && data.data.order_status === 'PAID'
         ) {
-        alert("payment done and order placed");
+        alert("payment done ");
         console.log("data from the front end ",data);
         
       
@@ -133,6 +133,9 @@ const [orderData,setOrderData]=useState()
           });
           const data=await response.json()
           console.log(data)
+          if(data){
+            alert('order placed')
+          }
           navigate("/");
         } catch (error) {
           console.log(error)
