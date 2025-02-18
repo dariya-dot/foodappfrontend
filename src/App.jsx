@@ -17,7 +17,7 @@ import ResetNewpassword from './components/forgetpassword/ResetNewpassword'
 import Appstore from './components/appstore/Appstore'
 import Footer from './components/Footer/Footer'
 import Allproducts from './components/complteproducts/Allproducts'
-import Orders from './components/orders/orders'
+import Orders from './components/orders/Orders'
 const App = () => {
    const [showLogin,setShowLogin]=useState(false)
    const footerRef = useRef(null);
