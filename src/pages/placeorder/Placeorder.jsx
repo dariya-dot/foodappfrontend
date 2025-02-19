@@ -61,6 +61,7 @@ const [orderData,setOrderData]=useState()
 
     if (Object.keys(cartItems).length === 0) {
       console.error("Cart is empty");
+      alert("cart is empty")
       return;
     }
 
@@ -95,6 +96,7 @@ const [orderData,setOrderData]=useState()
 
       const PaidData = await response.json();
       console.log(PaidData);
+   
       if (PaidData.success && PaidData.data.payment_session_id) {
         setOrderId(PaidData.data.order_id);
         setSessionId(PaidData.data.payment_session_id);
@@ -231,10 +233,12 @@ const [orderData,setOrderData]=useState()
         <div className="multiInput">
           <input
             name="number"
-            type="Number"
+            type="text"
             placeholder="Contact Number"
             onChange={onchangeHandler}
             value={data.number}
+            pattern="\d{10}"
+            maxLength={10}
             required
           />
           <input
@@ -283,14 +287,14 @@ const [orderData,setOrderData]=useState()
                 {"\u20B9"} {subtotal.toFixed(2)}
               </div>
             </div>
-            <hr />
+            <hr  className="hr"/>
             <div className="cardtotaldetails">
               <div>Delivery Fee (3%)</div>
               <div>
                 {"\u20B9"} {deliveryFee.toFixed(2)}
               </div>
             </div>
-            <hr />
+            <hr className="hr" />
             <div className="cardtotaldetails">
               <div>
                 <strong>Total</strong>
@@ -301,7 +305,7 @@ const [orderData,setOrderData]=useState()
                 </strong>
               </div>
             </div>
-            <button type="submit">Proceed To Payment</button>
+  <center>          <button type="submit">Proceed To Payment</button></center>
           </div>
         </div>
       </div>

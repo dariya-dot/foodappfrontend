@@ -1,12 +1,4 @@
-input[type="number"]::-webkit-inner-spin-button, 
-input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
 
-input[type="number"] {
-  appearance: textfield;
-}
 .placeorderLeft .multiInput{
     display: flex;
     width: 100%;
@@ -14,10 +6,57 @@ input[type="number"] {
     gap: 5px;
 }
 .place-order{
+  margin-top: 50px;
     display: flex;
-    border: 1px solid red;
-    justify-content: space-around;
+
+    justify-content: space-between;
 }
+
 input{
   border-radius: 5px;
 }
+.hr{
+  width: 90%;
+}
+@media (max-width:770px) {
+ .place-order{
+  display: flex;
+  flex-direction: column;
+  margin: 10px ;
+ }
+ .placeorderLeft .multiInput input{
+  display: flex;
+  flex-direction: column;
+      
+
+}
+
+ .placeorderLeft .multiInput input{
+ width: 50%;
+  
+}
+.place-order .palceorderRight{
+  display: flex;
+  justify-content: center;
+ align-items: center;
+
+
+}
+.place-order  button{
+width: fit-content;
+padding: 10px 15px;
+}
+.palceorderRight{
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  margin-top: 20px;
+  border-radius: 10px;
+  }
+  .placeorderLeft{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 10px;
+    padding: 5px;
+  }
+}
+
+
+
