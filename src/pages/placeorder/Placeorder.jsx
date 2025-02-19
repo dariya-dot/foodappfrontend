@@ -33,7 +33,12 @@ const [orderData,setOrderData]=useState()
   const subtotal = getTotalCartAmount(); // Calculate subtotal
   const deliveryFee = subtotal * 0.03; // 3% of subtotal
   const totalAmount = subtotal + deliveryFee; // Final total
-
+  useEffect(() => {
+    if (sessionId && orderId) {
+      paymentPage();
+    }
+  }, [sessionId, orderId]);
+  
   useEffect(() => {
     const initializeSDK = async () => {
       try {
@@ -162,6 +167,7 @@ const [orderData,setOrderData]=useState()
         
           }else{
             alert("order saved")
+            navigate('/')
           }
         
         } catch (error) {
