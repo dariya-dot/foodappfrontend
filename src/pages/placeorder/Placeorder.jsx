@@ -93,7 +93,10 @@ const [orderData,setOrderData]=useState()
       if (PaidData.success && PaidData.data.payment_session_id) {
         setOrderId(PaidData.data.order_id);
         setSessionId(PaidData.data.payment_session_id);
-       await paymentPage();
+        setTimeout(() => {
+          paymentPage();
+        }, 500);
+      //  await paymentPage();
       } else {
         alert("payment not intiated");
       }
@@ -103,6 +106,26 @@ const [orderData,setOrderData]=useState()
   };
 
   
+
+  
+  const paymentPage = async () => {
+    try {
+      if (cashfree) {
+        cashfree
+          .checkout({
+            paymentSessionId: sessionId,
+            redirectTarget: "_modal",
+          })
+          .then(() => {
+           verifyPayment(orderId);
+          });
+      } else {
+        console.error("Cashfree SDK is not loaded");
+      }
+    } catch (error) {
+      console.log("payment error:", error);
+    }
+  };
 
   const verifyPayment = async (orderId) => {
     try {
@@ -133,10 +156,12 @@ const [orderData,setOrderData]=useState()
           });
           const data=await response.json()
           console.log(data)
-          if(data){
+          if(data.message=== 'user not saved'){
 
-            alert('order placed')
-            navigate("/");
+            alert('order not  placed user not found')
+        
+          }else{
+            alert("order saved")
           }
         
         } catch (error) {
@@ -154,24 +179,6 @@ const [orderData,setOrderData]=useState()
     }
   };
   
-  const paymentPage = async () => {
-    try {
-      if (cashfree) {
-        cashfree
-          .checkout({
-            paymentSessionId: sessionId,
-            redirectTarget: "_modal",
-          })
-          .then(() => {
-           verifyPayment(orderId);
-          });
-      } else {
-        console.error("Cashfree SDK is not loaded");
-      }
-    } catch (error) {
-      console.log("payment error:", error);
-    }
-  };
 
   return (
     <form onSubmit={placeOrderHandler} className="place-order">

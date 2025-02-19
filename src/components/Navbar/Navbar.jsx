@@ -25,6 +25,7 @@ const NavBar = ({scrollToAppstore,setShowLogin,scrollToFooter}) => {
     localStorage.removeItem('userId')
     setShowLogin(false)
     navigate("/");
+    window.location.reload()
   }
   return (
     <>
